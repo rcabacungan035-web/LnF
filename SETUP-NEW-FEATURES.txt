@@ -1,0 +1,17 @@
+MU LOST & FOUND - FEATURE PATCH SETUP
+
+1. BACK UP your current mu_lost_found folder and database before replacing files.
+2. Copy the updated project files into your existing XAMPP htdocs/mu_lost_found folder.
+3. Open api/config/super-admin.php and replace REPLACE_WITH_YOUR_SUPER_ADMIN_EMAIL@example.com with the exact email in your existing admin table. The email must match the administrator account used on admin-login.php.
+4. Open api/config/mailtrap.php and enter your Mailtrap Email Sending API token and a sender email address/domain verified in Mailtrap. Do not place the token in JavaScript or share it publicly.
+5. Confirm PHP cURL is enabled in XAMPP (php.ini: extension=curl), then restart Apache.
+6. Sign in as an administrator. Admin Dashboard now has a Post Lost/Found link. The first admin-created item automatically creates/reuses a system reporter record in the existing student table using the configured Super Admin email. No schema migration is intended; the existing item.student_id relationship is preserved.
+7. Sign in with Google to test the student login notification. Sign in with admin credentials to test the administrator notification. Real email delivery requires a verified Mailtrap sending domain and a valid API token. Check Apache/PHP error logs if delivery fails; login itself is not blocked by a mail delivery failure.
+8. Test a student dashboard item using View Full Screen and test the View Full Screen button for every row on Admin > Items.
+9. Test Super Admin access with the configured account and confirm another admin account receives HTTP 403 on super-admin.php.
+
+IMPORTANT NOTES
+- The notification email is sent to the account that just logged in. A notification goes to the Google account email after successful Google authentication and to the administrator email after successful admin login.
+- Terms and Conditions is a general starter policy. Review it for your school's requirements before production use.
+- This patch intentionally does not change existing table names or require an SQL migration.
+- Rotate the Google OAuth client secret if the secret from your original local config has ever been shared or committed publicly. Keep OAuth and Mailtrap credentials private.

@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.login-page {
+    min-height: 100vh;
+    background: #f4f7fb;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-card {
+    background: #ffffff;
+
+    padding: 45px 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.mu-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    display: block;
+}
+
+.login-card h1 {
+    color: #683014;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+.welcome-text {
+    color: #555;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.login-description {
+    color: #777;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+/* =========================
+   GOOGLE BUTTON
+========================= */
+
+.google-btn {
+    width: 100%;
+
+    height: 52px;
+
+    background: #ffffff;
+
+    border: 1px solid #d5d5d5;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    color: #333;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.google-btn:hover {
+    background: #f7f7f7;
+
+    border-color: #bdbdbd;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.google-btn:active {
+    transform: translateY(0);
+}
+
+.google-icon {
+    font-family: Arial, sans-serif;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    color: #683014;
+}
+
+/* =========================
+   LOGIN MESSAGE
+========================= */
+
+.login-message {
+    min-height: 22px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #d32f2f;
+}
+
+.login-footer {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.login-footer p {
+    color: #999;
+
+    font-size: 11px;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-body {
+    min-height: 100vh;
+
+    background: #f4f7fb;
+}
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+
+    background: #60420f;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    color: white;
+}
+
+.nav-brand {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-name {
+    font-size: 13px;
+}
+
+.logout-btn {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+    background: transparent;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* DASHBOARD CONTENT */
+
+.dashboard-container {
+    width: 88%;
+    max-width: 1200px;
+
+    margin: 40px auto;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    color: #683014;
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+/* DASHBOARD CARDS */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.dashboard-card {
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.09);
+}
+
+.card-icon {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.dashboard-card h3 {
+    color: #333;
+
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.dashboard-card p {
+    color: #888;
+
+    font-size: 12px;
+}
+
+/* RECENT ITEMS */
+
+.recent-section {
+    margin-top: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.recent-section h2 {
+    color:#683014;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.empty-message {
+    color: #888;
+
+    font-size: 13px;
+
+    padding: 25px 0;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .dashboard-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .login-card {
+        padding: 35px 25px;
+    }
+
+    .login-card h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .user-name {
+        display: none;
+    }
+    
+.return-dashboard {
+    display: inline-block;
+    padding: 9px 14px;
+    background: #ffffff;
+    color: #683014;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.return-dashboard:hover {
+    background: #e0e7ff;
+}
+}
+
+/* Login legal links and copyright */
+.login-footer .copyright { font-size: 12px; color: #7b8494; margin-top: 12px; }
+.login-footer a { text-underline-offset: 3px; }
