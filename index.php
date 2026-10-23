@@ -370,7 +370,11 @@ if (isset($_SESSION['user'])) {
             <!-- ACADEMIC DISCLAIMER -->
             <div class="login-disclaimer">
                 <strong>Disclaimer:</strong>
-           
+                This website is for demonstration and academic
+                purposes only as part of an SIA subject project.
+                It does not represent a real company, official
+                service, or legal government entity.No real
+                government operations or claims are made.
             </div>
 
         </section>
